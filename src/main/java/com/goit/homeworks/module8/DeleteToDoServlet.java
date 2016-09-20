@@ -15,8 +15,11 @@ public class DeleteToDoServlet extends HttpServlet {
     private ToDoService service = new ToDoService();
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        service.deleteTask(new ToDo(request.getParameter("todo"), request.getParameter("category")));
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String[] toDelete = request.getParameterValues("deletedTasks");
+        for (int i = toDelete.length - 1; i >= 0; i--) {
+            service.getToDos().remove(Integer.parseInt(toDelete[i]));
+        }
         response.sendRedirect("/list-todos.do");
     }
 }

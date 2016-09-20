@@ -13,20 +13,23 @@
 </head>
 <body>
 <h2>My ToDo List</h2>
+<form method="post" action="/delete-todo.do">
 <table width="100%" border="1" align="center">
     <tr bgcolor="#949494">
         <th>Name</th>
         <th>Category</th>
         <th>Complete</th>
     </tr>
-    <c:forEach items="${todos}" var="todo">
+    <c:forEach items="${todos}" var="todo" varStatus="loop">
         <tr>
             <td>${todo.name}</td>
             <td>${todo.category}</td>
-            <td><a href="/delete-todo.do?todo=${todo.name}&category=${todo.category}">Delete</a></td>
+            <td><input type="checkbox" name="deletedTasks" value="${loop.index}" /></td>
         </tr>
     </c:forEach>
 </table>
+    <input name="delete" type="submit" value="Delete"/>
+</form>
 <form method="post" action="/add-todo.do">
     <label>Task Name</label>
     <input name="new-todo" type="text"/> <br/>
