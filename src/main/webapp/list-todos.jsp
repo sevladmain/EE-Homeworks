@@ -28,14 +28,14 @@
         </tr>
     </c:forEach>
 </table>
-    <input name="delete" type="submit" value="Delete"/>
+    <input name="delete" type="submit" value="Update Tasks"/>
 </form>
 <form method="post" action="/add-todo.do">
     <label>Task Name</label>
     <input name="new-todo" type="text"/> <br/>
     <label>Task Category</label>
     <input name="new-category" type="text"/> <br/>
-    <input name="add" type="submit" value="Submit" />
+    <input name="add" type="submit" value="Add Task" />
 </form>
 </body>
 </html>
