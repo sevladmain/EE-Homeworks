@@ -4,8 +4,4 @@
 
     <display-name>To do List</display-name>
 
-    <welcome-file-list>
-        <welcome-file>list-todo.do</welcome-file>
-    </welcome-file-list>
-
 </web-app>

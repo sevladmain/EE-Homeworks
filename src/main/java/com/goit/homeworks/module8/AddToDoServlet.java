@@ -24,6 +24,6 @@ public class AddToDoServlet extends HttpServlet {
         String newToDo = request.getParameter("new-todo");
         String category = request.getParameter("new-category");
         service.addTask(new ToDo(newToDo, category));
-        response.sendRedirect("/list-todos.do");
+        response.sendRedirect("/");
     }
 }

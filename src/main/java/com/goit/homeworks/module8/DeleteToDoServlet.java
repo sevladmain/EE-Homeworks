@@ -20,6 +20,6 @@ public class DeleteToDoServlet extends HttpServlet {
         for (int i = toDelete.length - 1; i >= 0; i--) {
             service.getToDos().remove(Integer.parseInt(toDelete[i]));
         }
-        response.sendRedirect("/list-todos.do");
+        response.sendRedirect("/");
     }
 }

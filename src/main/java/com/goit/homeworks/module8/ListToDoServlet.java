@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Created by SeVlad on 19.09.2016.
  */
-@WebServlet(urlPatterns = "/list-todos.do")
+@WebServlet(urlPatterns = "/")
 public class ListToDoServlet extends HttpServlet {
     private ToDoService service = new ToDoService();
 
